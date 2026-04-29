@@ -1,4 +1,5 @@
 import { resumeData } from "@/data/resume";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -10,25 +11,38 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <div className="inline-block mb-6 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary-light text-sm font-medium animate-fade-in-up">
+        <div className="mb-8 relative inline-block animate-fade-in-up">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary blur-lg opacity-50 animate-pulse" />
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-surface-light overflow-hidden shadow-2xl">
+            <Image
+              src="/img/baru.jpg"
+              alt={resumeData.name}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="block mb-6 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary-light text-sm font-medium animate-fade-in-up stagger-1 mx-auto w-fit">
           {resumeData.location}
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 animate-fade-in-up stagger-1">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 animate-fade-in-up stagger-2">
           <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient">
             {resumeData.name}
           </span>
         </h1>
 
-        <h2 className="text-2xl sm:text-3xl text-muted font-light mb-8 animate-fade-in-up stagger-2">
+        <h2 className="text-2xl sm:text-3xl text-muted font-light mb-8 animate-fade-in-up stagger-3">
           {resumeData.title}
         </h2>
 
-        <p className="text-lg text-muted max-w-2xl mx-auto mb-10 animate-fade-in-up stagger-3">
+        <p className="text-lg text-muted max-w-2xl mx-auto mb-10 animate-fade-in-up stagger-4">
           {resumeData.tagline}
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up stagger-4">
+        <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up stagger-5">
           <a
             href="#contact"
             className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
@@ -43,7 +57,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="flex justify-center gap-6 mt-10 animate-fade-in-up stagger-5">
+        <div className="flex justify-center gap-6 mt-10 animate-fade-in-up stagger-6">
           <a
             href={resumeData.socials.github}
             target="_blank"
