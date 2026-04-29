@@ -50,7 +50,7 @@ export default function Hero() {
             Get in Touch
           </a>
           <a
-            href="#experience"
+            href="#projects"
             className="px-8 py-3 rounded-full border border-surface-light text-foreground font-medium hover:bg-surface hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
           >
             View My Work
