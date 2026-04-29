@@ -11,12 +11,14 @@ export default function Footer() {
         <p className="text-sm text-muted">
           Built with{" "}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-medium">
-            Next.js
+            Dedication
           </span>{" "}
           &{" "}
           <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent font-medium">
-            Tailwind CSS
-          </span>
+            Sincerity
+          </span>{" "}
+          {" "}
+          <span>🤟</span>
         </p>
       </div>
     </footer>
